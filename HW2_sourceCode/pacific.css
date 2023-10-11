@@ -1,0 +1,138 @@
+ /*
+ File: pacific.css
+ Created: 10/10/2023
+ GUI Assignment: Style a Site with External CSS
+ I used these links as reference for making my code: 
+
+ https://www.w3schools.com/css/css_grid.asp
+ https://www.youtube.com/watch?v=jV8B24rSN5o
+ https://css-tricks.com/snippets/css/complete-guide-grid/
+ https://www.w3schools.com/css/css3_object-fit.asp
+
+ Using these links helped me get a general understanding of how to 
+ recreate the site shown using external CSS. 
+
+ Copyright (c) 2023 by ThienTran. All rights reserved. 
+ May be freely copied/excerpted for educational purposes 
+ with credit to the author.
+
+ Updated by TL on 10/11/2023
+ */
+
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+	display: block;
+}
+
+#wrapper { /*creates the "main" page of the website in the "wrapper" div*/
+	display: grid; /*creates a css grid*/
+	background-color: lightblue; /*default color of grid is light blue*/
+	margin: 20px auto;/*centers the "main" page in top/bot and left/right format*/
+	width: 80%; /*how much space "main" page takes*/
+	min-width: 600px; /*min width of adjustment for page is 600px*/
+}
+
+#content { /*same as #wrapper but for general content on page*/
+	background-color: white; /*sets blackground of this block to be white*/
+	grid-column: 2; 
+	grid-row: 2; /*block starts in col2 row2*/
+}
+
+header { /*formatting for header*/
+	grid-column: 1/3; /*block fills 1/3 of col1 and extends to end of row*/
+	background-image: url("sunset.jpg");
+	background-repeat: no-repeat; /*makes sure it dont repeat*/
+	background-position-x: right; 
+    background-position-y: bottom; /*sets image into bottom right of header*/
+	background-color: #000033; /*fills rest of header w main color of img*/ 
+	width: 100%; 
+	height: 100%; /*stretchs img to fit size of header*/
+	color: white; 
+}
+
+img { /*format for coast.jpg img*/
+	margin: 10px 20px; 
+	float: left; /*lets text float and fill to right side of img*/
+}
+
+body { /*format for main body of site*/
+	background-image: url("ptrbackground.jpg"); 
+	background-repeat: repeat-x; /*prevents imge to repeat*/
+	background-color: #00569f; /*extends bottom color to rest of pg after bg img ends*/
+	color: #666666; 
+	margin-top: 20px;
+	font-family: Arial, Helvetica, sans-serif; 
+}
+
+#content ul { /*content wraps around ul div*/
+	list-style-image: url("marker.gif"); /*changes list style to supplied img*/
+	list-style-position: inside; /*puts it inside the text so it formats right*/
+}
+
+#wrapper > nav { /*wrapper wraps around nav*/
+	background-color: lightblue; /*bg color of nav*/
+}
+
+nav ul { 
+	font-size: 1.2em;
+	text-align: left;
+	list-style-type: none; /*takes out bullet points*/
+	font-weight: bold; 
+	background-color: lightblue;  /*turns color */
+}
+
+nav ul li { 
+	margin-right: 30px;
+}
+
+nav ul a { 
+	text-decoration: none; 
+}
+
+nav a:visited { 
+	color: #344873; 
+}
+
+nav a:hover { 
+	color: #FFFFFF; 
+}
+
+.resort { /*access to resort div*/
+	font-weight: bold; 
+	font-size: 1.1em; 
+	color: cornflowerblue; 
+}
+
+h1 { 
+	margin-bottom: 0; 
+	padding: 10px; 
+}
+
+h2 { 
+	color: #3399CC; 
+}
+
+h1, h2 { 
+	padding-left: 20px; 
+	font-family: Georgia, "Times New Roman", serif; 
+}
+
+#contact { 
+	font-size: 90%; 
+	margin-left: 20px; 
+	margin-bottom: 70px; 
+	margin-right: 20px; 
+}
+
+dt { 
+	color: #000033; 
+}
+
+footer { /*format for footer div*/
+	grid-column: 2; 
+	grid-row: 3; /*moves footer block into col2 row3*/
+	padding-left: 20px; 
+	padding-bottom: 20px;
+	background-color: white;
+	font-family: Georgia, "Times New Roman", serif; 
+	font-style: italic; 
+}
